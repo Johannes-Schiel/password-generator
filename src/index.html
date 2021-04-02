@@ -22,6 +22,46 @@
 
     <!-- Content aus dem Tutorial: START -->
 
+    <div class="wrapper">
+        <div id="password" class="password"></div>
+        <div id="controlBox" class="controls">
+            <form id="controls">
+
+                <!-- Buchstaben -->
+                <label for="letters" class="toggle">
+                    Buchstaben
+                    <input name="letters" id="letters" type="checkbox" value="letters" checked="true">
+                    <span class="roundbutton"></span>
+                </label>
+
+                <!-- Numbers -->
+                <label for="numbers" class="toggle">
+                    Nummern
+                    <input name="numbers" id="numbers" type="checkbox" value="numbers" checked="true">
+                    <span class="roundbutton"></span>
+                </label>
+
+                <!-- Sonderzeichen -->
+                <label for="specialCharacters" class="toggle">
+                    Sonderzeichen
+                    <input name="specialCharacters" id="specialCharacters" checked="true" type="checkbox"
+                        value="specialCharacters">
+                    <span class="roundbutton"></span>
+                </label>
+
+                <!-- Range SLider -->
+                <input min="1" max="60" type="range" value="45" name="length" id="length">
+                <div class="length-value">
+                    <span>Länge</span>
+                    <span id="length-value"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Passwort Genertieren</button>
+            </form>
+        </div>
+    </div>
+
 
 
     <!-- Content aus dem Tutorial: END -->

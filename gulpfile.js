@@ -22,7 +22,7 @@ const buffer = require('vinyl-buffer');
 
 // Define important variables
 const src = './src';
-const dest = './dist';
+const dest = './docs';
 
 // Reload the browser
 const reload = (done) => {

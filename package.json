@@ -1,7 +1,7 @@
 {
-    "name": "basic-dev-environment-2020",
-    "version": "1.2.1",
-    "description": "Bei diesem Repository handelt es sich um meine \"Test-/Entwicklungsumgebung\" für alle meine YouTube Tutorials. Sie basiert auf Gulp, TypeScript/JS, ES6+ und SASS",
+    "name": "passwort-generator",
+    "version": "1.0.0",
+    "description": "Code aus dem gemeinsamen Tutorial von The Morpheus Tutorials und Unleashed Design in dem diese einen Passwort Generator bauen.",
     "main": "index.js",
     "scripts": {
         "dev": "gulp dev",
@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Unleashed-Design/basic-dev-environment-2020.git"
+        "url": "https://github.com/Johannes-Schiel/password-generator"
     },
     "keywords": [
         "Gulp",
@@ -23,9 +23,9 @@
     "author": "Johannes Schiel",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Unleashed-Design/basic-dev-environment-2020/issues"
+        "url": "https://github.com/Johannes-Schiel/password-generator/issues"
     },
-    "homepage": "https://github.com/Unleashed-Design/basic-dev-environment-2020#readme",
+    "homepage": "https://github.com/Johannes-Schiel/password-generator#readme",
     "devDependencies": {
         "@babel/core": "^7.11.6",
         "@babel/preset-env": "^7.11.5",
