@@ -5,9 +5,11 @@ import { PasswordGenerator } from './generatepassword';
 // Global Variables
 
 let currentPassword = [];
+let clipboardState = false;
 
-const controls = document.querySelector('#controls');
+const controlsContainer = document.querySelector('#controls');
 const passwordContainer = document.querySelector('#password');
+const lengthContainer = document.querySelector('#length-value');
 
 // ###########################################
 // ###########################################
@@ -26,6 +28,8 @@ const getRandomNumber = (min, max) => {
 // The Real Stuff
 
 const animatePassword = () => {
+    passwordContainer.innerHTML = '';
+
     const passwordElements = document.createElement('div');
     passwordElements.setAttribute('class', 'characters');
     currentPassword.forEach((character, index) => {
@@ -35,8 +39,14 @@ const animatePassword = () => {
         characterElement.setAttribute('data-character', character);
         passwordElements.appendChild(characterElement);
     });
-    passwordContainer.innerHTML = '';
     passwordContainer.appendChild(passwordElements);
+
+    const copyed = document.createElement('div');
+    copyed.innerHTML = 'Kopieren';
+    copyed.setAttribute('id', 'copyed');
+    copyed.setAttribute('class', 'copyed');
+    passwordContainer.appendChild(copyed);
+
     const characterContainers = document.querySelectorAll('.character');
     characterContainers.forEach(character => {
         animateCharacter(character)
@@ -67,6 +77,9 @@ const animateCharacter = (element) => {
 const copyToClipBoard = () => {
     navigator.clipboard.writeText(currentPassword.join('')).then(() => {
         console.log('Async: Copying to clipboard was successful!');
+        const cta = document.querySelector('#copyed');
+        cta.classList.add('copyed-done');
+        cta.innerHTML = 'Passwort kopiert'
     });
 }
 
@@ -85,6 +98,7 @@ const getFormValues = ($event) => {
         }
         if (element.type === 'range') {
             controlValues[element.name] = +element.value;
+            lengthContainer.innerHTML = +element.value;
         }
     });
     return controlValues;
@@ -105,14 +119,14 @@ setCurrentPassword({
 // ###########################################
 // EVENTS
 
-password.addEventListener('click', copyToClipBoard);
+passwordContainer.addEventListener('click', copyToClipBoard);
 
-controls.addEventListener('submit', ($event) => {
+controlsContainer.addEventListener('submit', ($event) => {
     $event.preventDefault();
     setCurrentPassword(getFormValues($event));
 });
 
-controls.addEventListener('change', ($event) => {
+controlsContainer.addEventListener('change', ($event) => {
     $event.preventDefault();
     console.log(getFormValues($event));
     setCurrentPassword(getFormValues($event));

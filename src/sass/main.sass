@@ -27,8 +27,12 @@
             font-size: 2rem
             cursor: pointer
             background-color: $prime
+        .length-value
+            color: white
+            font-size: 1.6rem
+            margin: 1rem 0 3rem 0
         input[type="range"]
-            margin: 3rem 0 3rem 0
+            margin: 2rem 0 0 0
             -webkit-appearance: none
             &:focus
                 outline: none
@@ -58,9 +62,18 @@
     width: 100%
     height: 100%
     display: flex
-    flex-direction: row
+    flex-direction: column
     justify-content: center
     align-items: center
+    cursor: copy
+    .copyed
+        text-align: center
+        color: white
+        margin: 5rem 0 0 0
+        cursor: pointer
+        font-size: 1.5rem
+        &.copyed-done
+            animation: copyed-done 500ms forwards
     .characters
         width: 100%
         padding: 10%
@@ -90,14 +103,6 @@
             &.animate
                 filter: blur(3px)
                 color: white
-
-@keyframes showletter
-    0%
-        transform: translate(0, 15rem)
-        opacity: 0
-    100%
-        transform: translate(0, 0)
-        opacity: 1
 
 .toggle
     margin: 0 0 2rem 0
@@ -143,3 +148,19 @@
             bottom: 0.4rem
             background-color: white
             transition: all 0.3s
+
+@keyframes showletter
+    0%
+        transform: translate(0, 15rem)
+        opacity: 0
+    100%
+        transform: translate(0, 0)
+        opacity: 1
+
+@keyframes copyed-done
+    0%
+        color: white
+    50%
+        color: $prime
+    100%
+        color: white
