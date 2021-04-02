@@ -79,7 +79,10 @@ const copyToClipBoard = () => {
         console.log('Async: Copying to clipboard was successful!');
         const cta = document.querySelector('#copyed');
         cta.classList.add('copyed-done');
-        cta.innerHTML = 'Passwort kopiert'
+        cta.innerHTML = 'Passwort kopiert';
+        setTimeout(() => {
+            cta.classList.remove('copyed-done');
+        }, 500);
     });
 }
 
