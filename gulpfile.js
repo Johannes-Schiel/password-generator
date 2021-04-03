@@ -84,7 +84,7 @@ const html = () => {
 
 // Compile .js to minified .js
 const script = () => {
-    return browserify(`${src}/js/main.js`, { debug: true })
+    return browserify(`${src}/js/main.js`, { debug: false, cache: {}, packageCache: {}})
         .transform('babelify', {
             presets: ['babel-preset-env'],
             plugins: ['babel-plugin-transform-runtime']
