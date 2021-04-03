@@ -2,11 +2,8 @@
     "name": "passwort-generator",
     "version": "1.0.0",
     "description": "Code aus dem gemeinsamen Tutorial von The Morpheus Tutorials und Unleashed Design in dem diese einen Passwort Generator bauen.",
-    "main": "index.js",
     "scripts": {
         "dev": "gulp dev",
-        "test": "jest",
-        "e2e": "jest --config jest-e2e.js",
         "build": "gulp build"
     },
     "repository": {
@@ -20,7 +17,7 @@
         "SASS",
         "HTML"
     ],
-    "author": "Johannes Schiel",
+    "author": "C. Mössner, J. Schiel",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/Johannes-Schiel/password-generator/issues"
