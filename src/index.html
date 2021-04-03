@@ -23,6 +23,13 @@
     <!-- Content aus dem Tutorial: START -->
 
     <div class="wrapper">
+        <div class="logos">
+            Created by
+            <a href="https://www.youtube.com/user/TheMorpheus407"><img src="./assets/morpheus.svg"
+                    alt="Logo The Morpheus Tutorials"></a> &
+            <a href="https://www.youtube.com/c/UnleashedDesign"><img src="./assets/unleashed-design.svg"
+                    alt="Logo The Morpheus Tutorials"></a>
+        </div>
         <div id="password" class="password"></div>
         <div id="controlBox" class="controls">
             <form id="controls">
@@ -46,6 +53,14 @@
                     Sonderzeichen
                     <input name="specialCharacters" id="specialCharacters" checked="true" type="checkbox"
                         value="specialCharacters">
+                    <span class="roundbutton"></span>
+                </label>
+
+                <!-- Häufig gesperrte Sonderzeichen -->
+                <label for="lockedSpecialCharacters" class="toggle">
+                    Sonderzeichen
+                    <input name="lockedSpecialCharacters" id="lockedSpecialCharacters" type="checkbox"
+                        value="lockedSpecialCharacters">
                     <span class="roundbutton"></span>
                 </label>
 

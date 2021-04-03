@@ -115,7 +115,8 @@ setCurrentPassword({
     length: 45,
     specialCharacters: true,
     numbers: true,
-    letters: true
+    letters: true,
+    lockedSpecialCharacters: false
 });
 
 // ###########################################

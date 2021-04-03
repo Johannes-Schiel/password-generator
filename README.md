@@ -1,10 +1,10 @@
 # Passwort Generator Tutorial
 
-In diesem Repository liegt der Code aus dem Gemeinsamen YouTube Tutorial von [The Morpheus Tutorials](https://www.youtube.com/watch?v=GMakamOBAwA) und [Unleashed Design](https://www.youtube.com/watch?v=GMakamOBAwA).
+In diesem Repository liegt der Code aus dem Gemeinsamen YouTube Tutorial von [The Morpheus Tutorials](https://www.youtube.com/user/TheMorpheus407) und [Unleashed Design](https://www.youtube.com/c/UnleashedDesign).
 
-Tutorial für die Generierung eines sicheren Passworts mit JavaScript: zum [Tutorial](https://www.youtube.com/watch?v=GMakamOBAwA).
+Tutorial für die Generierung eines sicheren Passworts mit JavaScript: zum [Tutorial]().
 
-Tutorial für die Entwicklung eines coolen, animierten Front-Ends: zum [Tutorial](https://www.youtube.com/watch?v=GMakamOBAwA)
+Tutorial für die Entwicklung eines coolen, animierten Front-Ends: zum [Tutorial]()
 
 ## Befehle
 
