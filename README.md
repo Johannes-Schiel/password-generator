@@ -8,7 +8,7 @@ Live: [Live Demo](https://johannes-schiel.github.io/password-generator/)
 
 Tutorial für die Generierung eines sicheren Passworts mit JavaScript: zum [Tutorial](https://www.youtube.com/watch?v=OXW1lu-bLk8).
 
-Tutorial für die Entwicklung eines coolen, animierten Front-Ends: zum [Tutorial]()
+Tutorial für die Entwicklung eines coolen, animierten Front-Ends: zum [Tutorial](https://youtu.be/kO68Gn-kuFY)
 
 ## Get started
 
