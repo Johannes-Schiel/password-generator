@@ -249,10 +249,12 @@ controlsContainer.addEventListener('change', ($event) => {
     setCurrentPassword(getFormValues($event));
 });
 
-
-
-
-
+controlsContainer.addEventListener('input', ($event) => {
+    // Verhindert das neu laden der Seite
+    $event.preventDefault();
+    // Lädt bei jeder Änderung den Wert in die Anzeige
+    getFormValues($event);
+});
 
 
 
