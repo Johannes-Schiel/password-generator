@@ -1,10 +1,10 @@
 export class PasswordGenerator {
-    getRandomNumbers(length){
+    getRandomNumbers(length) {
         var array = new Uint8Array(length);
         var res = new Float32Array(length);
         window.crypto.getRandomValues(array);
-        for (let i = 0; i < array.length; i++){
-            if(array[i] % 0xFF === 0) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 0xFF === 0) {
                 array[i] = 0xFE;
             }
             res[i] = array[i] / 0xFF;
@@ -17,7 +17,7 @@ export class PasswordGenerator {
         var charactersLength = characters.length;
         let randomness = this.getRandomNumbers(config["length"]);
         var result = [];
-        for (let i = 0; i < config["length"]; i++){
+        for (let i = 0; i < config["length"]; i++) {
             let char = characters.charAt(Math.floor(randomness[i] * charactersLength));
             result.push(char);
         }
@@ -28,22 +28,23 @@ export class PasswordGenerator {
 
     genChars(config) {
         let chars = "";
-        if(!config["numbers"] && !config["letters"] && !config["specialCharacters"] && !config["lockedSpecialCharacters"]) {
+        if (!config["numbers"] && !config["letters"] && !config["specialCharacters"] && !config["lockedSpecialCharacters"]) {
             return "-";
         }
-        if(config["numbers"]) {
+        if (config["numbers"]) {
             chars = chars + "0123456789";
         }
-        if(config["letters"]) {
+        if (config["letters"]) {
             chars = chars + "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         }
-        if(config["specialCharacters"]) {
-            chars = chars + "!#$%*()-,./:@^_`|~";
+
+        if (config["specialCharacters"]) {
+            chars = chars + "!§$%/()´`^°*~#|,:._-€@";
         }
-        if(config["lockedSpecialCharacters"]) {
-            chars = chars + "\"\'&+;<=>?[\\]{}";
+        if (config["lockedSpecialCharacters"]) {
+            chars = chars + "\\?\"[{\'&>;+}=]< ";
         }
         return chars;
     }
 
-} 
+}
