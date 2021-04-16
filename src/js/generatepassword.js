@@ -4,17 +4,20 @@ export class PasswordGenerator {
         var res = new Float32Array(length);
         window.crypto.getRandomValues(array);
         for (let i = 0; i < array.length; i++) {
+            if (array[i] % 0xFF === 0) {
+                array[i] = 0xFE;
+            }
             res[i] = array[i] / 0xFF;
         }
         return res;
     }
 
     getPassword(config) {
-        var result = [];
-        var characters = this.genChars(config);
+        const characters = this.genChars(config);
         var charactersLength = characters.length;
         let randomness = this.getRandomNumbers(config["length"]);
-        for ( let i = 0; i < config["length"]; i++ ) {
+        var result = [];
+        for (let i = 0; i < config["length"]; i++) {
             let char = characters.charAt(Math.floor(randomness[i] * charactersLength));
             result.push(char);
         }
@@ -28,16 +31,18 @@ export class PasswordGenerator {
         if (!config["numbers"] && !config["letters"] && !config["specialCharacters"] && !config["lockedSpecialCharacters"]) {
             return "-";
         }
-        if (config["numbers"]){
+        if (config["numbers"]) {
             chars = chars + "0123456789";
         }
-        if (config["letters"]){
-            chars = chars + "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        if (config["letters"]) {
+            chars = chars + "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         }
-        if (config["specialCharacters"]){
+
+        if (config["specialCharacters"]) {
             chars = chars + "!§$%/()´`^°*~#|,:._-€@";
         }
-        if (config["lockedSpecialCharacters"]){
+
+      if (config["lockedSpecialCharacters"]){
             chars = chars + "\\?\"[{\'&>;+}=]<";
         }
         return chars;
