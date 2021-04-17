@@ -1,7 +1,9 @@
 name: Build
 
 on:
-  release: published
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
