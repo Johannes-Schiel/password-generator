@@ -41,10 +41,10 @@ export class PasswordGenerator {
         if (config["specialCharacters"]) {
             chars = chars + "!§$%/()´`^°*~#|,:._-€@";
         }
-        if (config["lockedSpecialCharacters"]) {
-            chars = chars + "\\?\"[{\'&>;+}=]< ";
+
+      if (config["lockedSpecialCharacters"]){
+            chars = chars + "\\?\"[{\'&>;+}=]<";
         }
         return chars;
     }
-
 }
