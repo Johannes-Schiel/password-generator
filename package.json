@@ -1,6 +1,6 @@
 {
     "name": "passwort-generator",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Code aus dem gemeinsamen Tutorial von The Morpheus Tutorials und Unleashed Design in dem diese einen Passwort Generator bauen.",
     "scripts": {
         "dev": "gulp dev",
@@ -26,7 +26,7 @@
     "devDependencies": {
         "@babel/core": "^7.11.6",
         "@babel/preset-env": "^7.11.5",
-        "autoprefixer": "^9.7.6",
+        "autoprefixer": "^10.2.5",
         "babel-core": "^6.26.3",
         "babel-eslint": "^10.1.0",
         "babel-plugin-transform-runtime": "^6.23.0",
@@ -35,7 +35,7 @@
         "babelify": "^8.0.0",
         "browser-sync": "^2.26.12",
         "browserify": "^17.0.0",
-        "cssnano": "^4.1.10",
+        "cssnano": "^5.0.2",
         "gulp": "^4.0.2",
         "gulp-babel": "^8.0.0",
         "gulp-clean-css": "^4.3.0",
@@ -46,7 +46,7 @@
         "gulp-jslint": "^1.0.10",
         "gulp-minify": "^3.1.0",
         "gulp-plumber": "^1.2.1",
-        "gulp-postcss": "^8.0.0",
+        "gulp-postcss": "^9.0.0",
         "gulp-rename": "^2.0.0",
         "gulp-sass": "^4.1.0",
         "gulp-sourcemaps": "^2.6.5",
@@ -55,6 +55,7 @@
         "gulp-util": "^3.0.8",
         "jest": "^26.6.3",
         "jshint": "^2.11.0",
+        "postcss": "^8.2.15",
         "rename": "^1.0.4",
         "tinyify": "^3.0.0",
         "vinyl-buffer": "^1.0.1",
