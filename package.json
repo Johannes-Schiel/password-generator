@@ -1,6 +1,6 @@
 {
     "name": "passwort-generator",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description": "Code aus dem gemeinsamen Tutorial von The Morpheus Tutorials und Unleashed Design in dem diese einen Passwort Generator bauen.",
     "scripts": {
         "dev": "gulp dev",
