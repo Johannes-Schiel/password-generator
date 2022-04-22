@@ -27,4 +27,4 @@ jobs:
         uses: jamesIves/github-pages-deploy-action@v4.3.0
         with:
           branch: gh-pages
-          folder: .
+          folder: dist
