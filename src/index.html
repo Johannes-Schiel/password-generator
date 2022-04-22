@@ -1,89 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <!-- Metadaten -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Titel -->
     <title>Passwort Generator</title>
 
     <!-- SASS Import -->
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
 
-    <!-- Font Import (Google Font) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
+  <body>
     <!-- Content aus dem Tutorial: START -->
 
     <div class="wrapper">
-        <div class="logos">
-            Created by
-            <a target="_blank" href="https://www.youtube.com/user/TheMorpheus407"><img src="./assets/morpheus.svg"
-                    alt="Logo The Morpheus Tutorials"></a> &
-            <a target="_blank" href="https://www.youtube.com/c/UnleashedDesign"><img src="./assets/unleashed-design.svg"
-                    alt="Logo The Morpheus Tutorials"></a>
-        </div>
-        <div id="password" class="password"></div>
-        <div id="controlBox" class="controls">
-            <form id="controls">
+      <div class="logos">
+        Created by
+        <a target="_blank" href="https://www.youtube.com/user/TheMorpheus407"
+          ><img src="./assets/morpheus.svg" alt="Logo The Morpheus Tutorials"
+        /></a>
+        &
+        <a target="_blank" href="https://www.youtube.com/c/UnleashedDesign"
+          ><img
+            src="./assets/unleashed-design.svg"
+            alt="Logo The Morpheus Tutorials"
+        /></a>
+      </div>
+      <div id="password" class="password"></div>
+      <div id="controlBox" class="controls">
+        <form id="controls">
+          <!-- Buchstaben -->
+          <label for="letters" class="toggle">
+            Buchstaben
+            <input
+              name="letters"
+              id="letters"
+              type="checkbox"
+              value="letters"
+              checked="true"
+            />
+            <span class="roundbutton"></span>
+          </label>
 
-                <!-- Buchstaben -->
-                <label for="letters" class="toggle">
-                    Buchstaben
-                    <input name="letters" id="letters" type="checkbox" value="letters" checked="true">
-                    <span class="roundbutton"></span>
-                </label>
+          <!-- Numbers -->
+          <label for="numbers" class="toggle">
+            Nummern
+            <input
+              name="numbers"
+              id="numbers"
+              type="checkbox"
+              value="numbers"
+              checked="true"
+            />
+            <span class="roundbutton"></span>
+          </label>
 
-                <!-- Numbers -->
-                <label for="numbers" class="toggle">
-                    Nummern
-                    <input name="numbers" id="numbers" type="checkbox" value="numbers" checked="true">
-                    <span class="roundbutton"></span>
-                </label>
+          <!-- Sonderzeichen -->
+          <label for="specialCharacters" class="toggle">
+            Sonderzeichen
+            <input
+              name="specialCharacters"
+              id="specialCharacters"
+              checked="true"
+              type="checkbox"
+              value="specialCharacters"
+            />
+            <span class="roundbutton"></span>
+          </label>
 
-                <!-- Sonderzeichen -->
-                <label for="specialCharacters" class="toggle">
-                    Sonderzeichen
-                    <input name="specialCharacters" id="specialCharacters" checked="true" type="checkbox"
-                        value="specialCharacters">
-                    <span class="roundbutton"></span>
-                </label>
+          <!-- Häufig gesperrte Sonderzeichen -->
+          <label for="lockedSpecialCharacters" class="toggle">
+            gesperrte Sonderzeichen
+            <input
+              name="lockedSpecialCharacters"
+              id="lockedSpecialCharacters"
+              type="checkbox"
+              value="lockedSpecialCharacters"
+            />
+            <span class="roundbutton"></span>
+          </label>
 
-                <!-- Häufig gesperrte Sonderzeichen -->
-                <label for="lockedSpecialCharacters" class="toggle">
-                    gesperrte Sonderzeichen
-                    <input name="lockedSpecialCharacters" id="lockedSpecialCharacters" type="checkbox"
-                        value="lockedSpecialCharacters">
-                    <span class="roundbutton"></span>
-                </label>
+          <!-- Range SLider -->
+          <input
+            min="8"
+            max="60"
+            type="range"
+            value="45"
+            name="length"
+            id="length"
+          />
+          <div class="length-value">
+            <span>Länge</span>
+            <span id="length-value">45</span>
+          </div>
 
-                <!-- Range SLider -->
-                <input min="8" max="60" type="range" value="45" name="length" id="length">
-                <div class="length-value">
-                    <span>Länge</span>
-                    <span id="length-value">45</span>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit">Passwort generieren</button>
-            </form>
-        </div>
+          <!-- Submit Button -->
+          <button type="submit">Passwort generieren</button>
+        </form>
+      </div>
     </div>
 
-
-
     <!-- Content aus dem Tutorial: END -->
+  </body>
 
-</body>
-
-<!-- JS Import -->
-<script src="./js/main.bundle.js"></script>
-
+  <!-- JS Import -->
+  <script src="./js/main.bundle.js"></script>
 </html>
