@@ -1,29 +1,31 @@
 name: Build
 
 on:
-  push:
-    - master
+    push:
+        branches:
+            - master
+    workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x]
+        strategy:
+            matrix:
+                node-version: [12.x]
 
-    steps:
-      - uses: actions/checkout@v2
+        steps:
+            - uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm i
-      - run: npm run build
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - run: npm i
+            - run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: jamesIves/github-pages-deploy-action@v4.3.0
-        with:
-          branch: gh-pages
-          folder: dist
+            - name: Deploy to GitHub Pages
+              uses: jamesIves/github-pages-deploy-action@v4.3.0
+              with:
+                  branch: gh-pages
+                  folder: dist
