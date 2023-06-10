@@ -1,9 +1,9 @@
-FROM node:18-alpine
+FROM node:12-alpine
 
-WORKDIR /app
+WORKDIR /dist
 
 COPY . .
 RUN npm i
 RUN npm run build
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "dev"]
