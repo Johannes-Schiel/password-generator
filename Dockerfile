@@ -1,6 +1,6 @@
 FROM node:12-alpine
 
-WORKDIR /dist
+WORKDIR /
 
 COPY . .
 RUN npm i
