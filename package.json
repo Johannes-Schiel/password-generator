@@ -24,7 +24,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"format": "prettier --write \"src/**/*.js\" \"src/**/*.html\" \"src/**/*.sass\"",
-		"start": "vite preview --port 3000 --host 0.0.0.0"
+		"start": "vite --port 3000 --host 0.0.0.0"
 	},
 	"devDependencies": {
 		"sass": "^1.49.9",
