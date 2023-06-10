@@ -1,0 +1,6 @@
+version: "3"
+services:
+  password-generator:
+    image: ghcr.io/johannes-schiel/password-generator:master
+    ports:
+      - 3000:3000
