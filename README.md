@@ -1,6 +1,7 @@
 # Passwort Generator Tutorial
 
 [![Build](https://github.com/Johannes-Schiel/password-generator/actions/workflows/node.yml/badge.svg?branch=master)](https://github.com/Johannes-Schiel/password-generator/actions/workflows/node.yml)
+[![Docker](https://github.com/Johannes-Schiel/password-generator/actions/workflows/docker-image.yml/badge.svg?branch=master)](https://github.com/Johannes-Schiel/password-generator/actions/workflows/docker-image.yml)
 
 In diesem Repository liegt der Code aus dem gemeinsamen YouTube Tutorial von [The Morpheus Tutorials](https://www.youtube.com/user/TheMorpheus407) und [Unleashed Design](https://www.youtube.com/c/UnleashedDesign).
 
